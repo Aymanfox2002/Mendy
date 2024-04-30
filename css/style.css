@@ -1,0 +1,234 @@
+/* -------Global Css----------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+h1,
+.h1 {
+  font-family: "Lilita One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+body {
+  font-family: "Signika", sans-serif;
+  background-color: #f2f2f2;
+  overflow-x: hidden;
+}
+html {
+  scroll-behavior: smooth;
+}
+:root {
+  --primary: #ff9800;
+  --transition: 0.3s;
+}
+/* -------Global Css----------- */
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.main-title {
+  color: var(--primary);
+}
+/* Header 🔽 */
+header {
+  background: url(../images/land-d.jpg);
+  background-size: cover;
+  height: 100vh;
+}
+header .layout {
+  background-image: -webkit-radial-gradient(
+    48% 42%,
+    140% 110%,
+    rgb(33 36 40 / 50%),
+    rgba(33, 37, 41, 0.6),
+    rgb(65 67 69 / 70%),
+    rgb(106 106 106 / 80%),
+    rgb(90 90 90 / 93%),
+    #575757 55%,
+    #949494 200%
+  );
+}
+header .navbar .navbar-brand {
+  width: 67px;
+}
+header .navbar .navbar-brand img {
+  width: 100%;
+}
+.navbar .navbar-nav .nav-item a {
+  transition: var(--transition);
+}
+.navbar .navbar-nav .nav-item a:hover,
+.navbar .navbar-nav .nav-item .active,
+.navbar .navbar-nav .nav-item a:focus {
+  color: var(--primary);
+}
+.navbar .navbar-toggler:focus {
+  box-shadow: none;
+}
+.navbar .navbar-toggler {
+  border: none;
+}
+/* Land */
+header .land .info {
+  margin-top: -140px;
+}
+
+header .land .info h1 span {
+  color: var(--primary);
+}
+/* Header 🔼 */
+/* About 🔽 */
+
+.about .row .img-part .img-box {
+  width: 290px;
+  margin-top: 50px;
+  max-height: 435px;
+  transition: all 0.3s;
+}
+.about .row .img-part .img-box,
+.about .row .img-part .img-box img {
+  border-radius: 10px;
+}
+.about .row .img-part .img-box img:first-of-type {
+  height: 100%;
+}
+.about .row .img-part .img-box::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 10px;
+  height: 100px;
+  background-color: #ff9800;
+  left: -38px;
+  top: 0;
+  border-radius: 10px;
+  animation: up-down 4s linear infinite alternate;
+}
+
+.about .row .img-part .img-box img:nth-child(2) {
+  left: -131px;
+  bottom: -70px;
+  width: 226px;
+  animation: move-img-utd 4s linear 0.5s infinite alternate;
+}
+
+.about .row .img-part .img-box img:last-of-type {
+  right: -100px;
+  top: -80px;
+  width: 200px;
+  height: 200px;
+  z-index: -1;
+  animation: move-img-rtl 4s linear 1s infinite alternate;
+}
+.about p {
+  font-size: 20px;
+  line-height: 1.9;
+}
+
+/* About 🔼 */
+/* Services 🔽  */
+.services {
+  background-color: #e2e2e2;
+}
+.services .row > div .box {
+  /* background: url(../images/land-d.jpg); */
+  background-size: cover;
+  border-radius: 10px;
+}
+
+.services .icon {
+  position: absolute;
+  left: 50%;
+  top: -35px;
+  transform: translateX(-50%);
+  background-color: #e2e2e2;
+  padding: 15px;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  font-size: 24px;
+  color: var(--primary);
+  transition: var(--transition);
+}
+.services .row > div .layout {
+  border-radius: 10px;
+  background-color: #00000099;
+  min-height: 252px;
+}
+/* Services 🔼 */
+/* Blogs 🔽 */
+.blogs .box {
+  border-radius: 20px;
+  overflow: hidden;
+  max-height: 256.6px;
+}
+.blogs .box:hover .info {
+  background-color: hsla(36, 100%, 50%, 0.496);
+}
+.blogs .box .info {
+  bottom: 0;
+  left: 0;
+  color: white;
+  width: 300px;
+  padding: 20px;
+  background-color: hsla(0, 0%, 0%, 0.569);
+  border-radius: 0 60px 0 0;
+  transition: all 0.3s;
+}
+.blogs .box .info h4 {
+  font-size: 21px;
+}
+.blogs .box .info p {
+  font-size: 13px;
+}
+/* Blogs 🔼 */
+/* contact 🔽 */
+.contact div:last-of-type .contact-icon {
+  width: 40px;
+  height: 40px;
+  background-color: var(--primary);
+  display: inline-block;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: white;
+}
+.contact div:last-of-type a {
+  color: black;
+  text-decoration: underline;
+}
+.contact .contact-text {
+  font-size: 28px;
+}
+/* contact 🔼 */
+/* Footer 🔽 */
+footer {
+  background-color: #1a1a1a;
+}
+footer .box-img {
+  width: 180px;
+}
+
+footer .sitemap li {
+  margin-bottom: 10px;
+}
+
+footer .sitemap li a {
+  color: rgb(255 255 255 / 50%);
+  transition: all 0.3s;
+}
+footer .sitemap li:hover a {
+  padding-left: 10px;
+  color: var(--primary);
+}
+footer .social li a {
+  color: rgb(255 255 255 / 50%);
+  transition: all 0.3s;
+}
+footer .social li:hover a {
+  color: var(--primary);
+}
+/* Footer 🔼 */
